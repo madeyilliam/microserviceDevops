@@ -1,0 +1,29 @@
+<template>
+  <template if:true={account.data}>
+    <div class="wrapper">
+      <div class="container">
+        <div class="img-container">
+          <img src="https://sdologodump.s3-us-west-2.amazonaws.com/datapipeline_logo.png" alt="salesforce data pipelines">
+        </div>
+        <div class="content">
+          <div class="head">
+              <p>{name}</p>
+          </div>
+          <div class="data">
+            <div class="inner-data">
+              <p>Latest Sentiment</p>
+              <span><img class="sent-logo" src={latestSentiment}></span>
+            </div>
+            <div class="inner-data">
+              <p>Lifetime Spend</p>
+              <span>{lifetimeSpend}</span>
+            </div>
+          </div>
+          <div class="watermark">
+            <p>Powered by Salesforce Data Pipelines</p>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </template>  
+</template>

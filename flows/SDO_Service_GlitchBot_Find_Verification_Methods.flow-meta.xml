@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Add_Email</name>
+        <label>Add Email</label>
+        <locationX>823</locationX>
+        <locationY>475</locationY>
+        <assignmentItems>
+            <assignToReference>cvarVerificationMethods</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>formulaEmailString</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Add_MobilePhone</name>
+        <label>Add MobilePhone</label>
+        <locationX>822</locationX>
+        <locationY>244</locationY>
+        <assignmentItems>
+            <assignToReference>cvarVerificationMethods</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>formulaMobilePhoneString</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Email_Address_is_Set</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Email_Address_is_Set</name>
+        <label>Check Email Address is Set</label>
+        <locationX>462</locationX>
+        <locationY>354</locationY>
+        <defaultConnector>
+            <targetReference>Add_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_is_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>rvarContact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Email is Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_MobilePhone_is_Set</name>
+        <label>Check MobilePhone is Set</label>
+        <locationX>462</locationX>
+        <locationY>136</locationY>
+        <defaultConnector>
+            <targetReference>Add_MobilePhone</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MobilePhone_is_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>rvarContact.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Email_Address_is_Set</targetReference>
+            </connector>
+            <label>MobilePhone is Null</label>
+        </rules>
+    </decisions>
+    <description>Returns valid verification methods for the specified Contact</description>
+    <formulas>
+        <name>formulaEmailString</name>
+        <dataType>String</dataType>
+        <expression>&apos;Email your code to  &apos; + TRIM(LEFT({!rvarContact.Email},3)) + &apos;***@***&apos; + TRIM(RIGHT({!rvarContact.Email},7))</expression>
+    </formulas>
+    <formulas>
+        <name>formulaMobilePhoneString</name>
+        <dataType>String</dataType>
+        <expression>&apos;SMS your code to (***) ***-&apos; + TRIM(RIGHT({!rvarContact.MobilePhone},4))</expression>
+    </formulas>
+    <interviewLabel>Einstein Bots - Find Verification Methods {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Einstein Bots - Find Verification Methods</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>211</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_MobilePhone_is_Set</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>rvarContact.Id</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputReference>rvarContact</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>MobilePhone</queriedFields>
+        <queriedFields>Email</queriedFields>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>cvarVerificationMethods</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>rvarContact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

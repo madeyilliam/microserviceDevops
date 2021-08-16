@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Approaching_Message</name>
+        <label>Approaching Message</label>
+        <locationX>206</locationX>
+        <locationY>411</locationY>
+        <actionName>liveMessageNotificationNotFound</actionName>
+        <actionType xsi:nil="true"/>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contextRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>channelDeveloperName</name>
+            <value>
+                <stringValue>YOU NEED TO UPDATE THIS VALUE</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>templateDeveloperName</name>
+            <value>
+                <stringValue>Appointment_Assistant_Approaching</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientPhone</name>
+            <value>
+                <elementReference>$Record.ServiceAppointment.Contact.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientRecordId</name>
+            <value>
+                <elementReference>$Record.ServiceAppointment.Contact.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>50.0</apiVersion>
+    <description>Used by SFS Last Mile to send Message to customer when technician is approaching</description>
+    <interviewLabel>SFS - Appointment Assistant - EnRoute {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SFS - Appointment Assistant - Approaching</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Approaching_Message</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LocationStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>LastMile</stringValue>
+            </value>
+        </filters>
+        <object>AssignedResource</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Instruction page for using and connecting Salesforce CMS.</description>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Salesforce CMS Demos &amp;amp; Learning!&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Salesforce CMS is a block-level web content management system that allows both professional content producers and departmental users to create snippets of content used in Salesforce Communities/Forums/Portals/Sites, B2C Commerce, B2B Commerce, and on other platforms.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Use the tabs in this Lightning App to manage CMS Workspaces, CMS Channels, and the individual content items themselves.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Using Salesforce CMS&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start with the &lt;a href=&quot;https://www.sfdc.co/SDOCMSScript&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;CMS Demo Script&lt;/a&gt; for SDO!&lt;/p&gt;&lt;p&gt;This updated demo script covers the basics of using the Salesforce CMS app, publishing content, surfacing that content in a community, and using the API to retrieve published content.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Learning &amp;amp; Basics:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;CMS &lt;a href=&quot;https://cms.salesforce.com/s/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Product Website&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://org62.lightning.force.com/lightning/r/CollaborationGroup/0F95e000000y2mCSAK/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Org62 Chatter Group&lt;/a&gt; for CMS&lt;/li&gt;&lt;li&gt;Trailhead: &lt;a href=&quot;https://trailhead.salesforce.com/en/content/learn/modules/salesforce-cms-basics&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;CMS Basics&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.salesforce.com/articleView?id=community_managed_content_overview.htm&amp;amp;type=5&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Help &amp;amp; Training&lt;/a&gt;: CMS&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Awesome Demo Components &amp;amp; Utilities&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://q-demo-components.herokuapp.com/#/demo-component/a015e00000MAm3nQAI&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Content Type Creator&lt;/a&gt;: Visually create content types with this Q Branch tool. This tool is already installed in this org, but needs to be configured. Visit the &lt;b&gt;CMS Content Types&lt;/b&gt; tab for more details.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Technical Reference &amp;amp; Advanced Topics:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.224.0.chatterapi.meta/chatterapi/connect_resources_managed_content_resources.htm&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Managed Content Delivery API&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://salesforce.quip.com/PjRkAvsWtMZW&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Creating CMS Content Types&lt;/a&gt;&lt;/li&gt;&lt;li&gt;JSON for Sample Content Types:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=1BA7INxZiYt3XTCf1i3cQTbxtjwU1IY41&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=1B9SouU5Et16oQHYliZVaci9Nlr-MWkWg&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Video (External)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=1BLhfMaqCNcxdx9iFqNb8jpJfp3ftUSHV&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Banner&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;CONNECT TO B2C COMMERCE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With the Winter &apos;20 release, Salesforce CMS can now drive editorial content for use in B2C Commerce storefronts using &lt;a href=&quot;https://www.salesforce.com/video/3620472/&quot; target=&quot;_blank&quot;&gt;Page Designer&lt;/a&gt;! You can now create CMS Channels for Commerce, and the content items you manage here in CMS Workspaces can be displayed in any store page driven by Page Designer!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Commerce SEs: For full instructions on how to connect a core org and Salesforce CMS to your Commerce Sandbox, please click here:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://salesforce.quip.com/Y8VSAlC7AE7v&quot; target=&quot;_blank&quot;&gt;Connecting Commerce and CMS&lt;/a&gt; (Quip, Aloha SSO Required)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: rgb(250, 0, 0);&quot;&gt;IMPORTANT: You must republish all the content items you plan to use for your commerce demos. Use the Workspaces to create &amp;amp; save drafts of your content items, then click the Publish button.&lt;/b&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b&gt;USE CMS IN B2B COMMERCE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Salesforce CMS can publish content to any community in your org. In SDO, the Professional community is your starting point for Lightning B2B Commerce. The commerce components in Professional live alongside standard and custom Lightning components. These components then link into the Visualforce based storefront.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Visit the Professional community using Experience Builder, and open the &lt;b&gt;Store&lt;/b&gt; navigation item.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b&gt;TREAT SALESFORCE RECORDS AS CONTENT&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The &lt;b&gt;&lt;i&gt;Training Courses&lt;/i&gt;&lt;/b&gt; tab in this app represents a hypothetical integration with an external Learning Management System, and illustrates how you can use &lt;a href=&quot;https://help.salesforce.com/articleView?id=community_managed_content_creating_content-crm.htm&amp;amp;type=5&quot; target=&quot;_blank&quot;&gt;Salesforce CMS&lt;/a&gt; to treat data in a salesforce org as content. Manage your training course records here in Lightning Experience, then visit the &lt;b&gt;&lt;i&gt;Training Home&lt;/i&gt;&lt;/b&gt; page in the &lt;b&gt;&lt;i&gt;Professional&lt;/i&gt;&lt;/b&gt; community to see how this works!&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>Description</name>
+                    <value>This component helps Q Branch understand how demos are used so we can better invest our resources.  No personal information is used.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>page</name>
+                    <value>Salesforce CMS</value>
+                </componentInstanceProperties>
+                <componentName>SDO_Tool_demo_appTrack</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>App -  CMS Instructions</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumnsStacked</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

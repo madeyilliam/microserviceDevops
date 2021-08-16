@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Panels</label>
+                <name>Panels</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Mounting Racks</label>
+                <name>Mounting_Racks</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Other</label>
+                <name>Other</name>
+            </dataCategory>
+            <label>Solar Power</label>
+            <name>Solar_Power</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Turbine Accessories</label>
+                <name>Turbine_Accessories</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Wind Turbines</label>
+                <name>Turbines</name>
+            </dataCategory>
+            <label>Wind Generation</label>
+            <name>Wind_Generation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Energy Storage</label>
+            <name>Energy_Storage</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Controller Software</label>
+                <name>Controller_Software</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Intelligent Optimization</label>
+                <name>Intelligent_Optimization</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Power Inverters</label>
+                <name>Power_Inverters</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Power Meters</label>
+                <name>Power_Meters</name>
+            </dataCategory>
+            <label>System Management</label>
+            <name>System_Management</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Services</label>
+            <name>Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Kits</label>
+            <name>Kits</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Cirrus-specific products.</description>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

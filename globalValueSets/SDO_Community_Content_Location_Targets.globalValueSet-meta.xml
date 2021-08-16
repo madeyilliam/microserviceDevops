@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Consumer: Home</fullName>
+        <default>false</default>
+        <label>Consumer: Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer: Support</fullName>
+        <default>false</default>
+        <label>Consumer: Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer: Community Home</fullName>
+        <default>false</default>
+        <label>Consumer: Community Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer: Case Records</fullName>
+        <default>false</default>
+        <label>Consumer: Case Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Home</fullName>
+        <default>false</default>
+        <label>Professional: Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Support</fullName>
+        <default>false</default>
+        <label>Professional: Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Community Home</fullName>
+        <default>false</default>
+        <label>Professional: Community Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Knowledge Home</fullName>
+        <default>false</default>
+        <label>Professional: Knowledge Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Field Service Home</fullName>
+        <default>false</default>
+        <label>Professional: Field Service Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Product Registration</fullName>
+        <default>false</default>
+        <label>Professional: Product Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Project Records</fullName>
+        <default>false</default>
+        <label>Professional: Project Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Case Records</fullName>
+        <default>false</default>
+        <label>Professional: Case Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Invoice Records</fullName>
+        <default>false</default>
+        <label>Professional: Invoice Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional: Group List</fullName>
+        <default>false</default>
+        <label>Professional: Group List</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Home</fullName>
+        <default>false</default>
+        <label>Partner: Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Support</fullName>
+        <default>false</default>
+        <label>Partner: Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Community Home</fullName>
+        <default>false</default>
+        <label>Partner: Community Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Field Service Home</fullName>
+        <default>false</default>
+        <label>Partner: Field Service Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Campaign Marketplace</fullName>
+        <default>false</default>
+        <label>Partner: Campaign Marketplace</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Marketing Funds</fullName>
+        <default>false</default>
+        <label>Partner: Marketing Funds</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Sales Home</fullName>
+        <default>false</default>
+        <label>Partner: Sales Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Customers &amp; Contacts</fullName>
+        <default>false</default>
+        <label>Partner: Customers &amp; Contacts</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Opportunity Detail</fullName>
+        <default>false</default>
+        <label>Partner: Opportunity Detail</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner: Contact Detail</fullName>
+        <default>false</default>
+        <label>Partner: Contact Detail</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>What: Allows targeting of a specific community. Alter these values and use list filters in order to do robust content targeting.</description>
+    <masterLabel>Web Content Location Targets</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

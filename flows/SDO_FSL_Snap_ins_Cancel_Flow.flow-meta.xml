@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <choices>
+        <name>Cancel_my_appointment</name>
+        <choiceText>Cancel my appointment</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Nevermind_take_me_back</name>
+        <choiceText>Nevermind, take me back</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Cancellation_Selection</name>
+        <label>Cancellation Selection</label>
+        <locationX>245</locationX>
+        <locationY>155</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Cancel_Appointment_Selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Cancel_my_appointment</leftValueReference>
+                <operator>WasSelected</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Appt_Status</targetReference>
+            </connector>
+            <label>Cancel Appointment</label>
+        </rules>
+        <rules>
+            <name>Do_Not_Cancel</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Nevermind_take_me_back</leftValueReference>
+                <operator>WasSelected</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CancellationAborted</targetReference>
+            </connector>
+            <label>Do Not Cancel</label>
+        </rules>
+    </decisions>
+    <interviewLabel>FSL Snap-ins Cancel Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FSL Snap-ins Cancel Flow</label>
+    <processType>FieldServiceWeb</processType>
+    <recordLookups>
+        <name>Lookup_Existing_Appointment</name>
+        <label>Lookup Existing Appointment</label>
+        <locationX>69</locationX>
+        <locationY>28</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Cancel_Appointment_Options</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ServiceAppointmentId</elementReference>
+            </value>
+        </filters>
+        <object>ServiceAppointment</object>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.AccountId</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.AppointmentNumber</assignToReference>
+            <field>AppointmentNumber</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.ArrivalWindowEndTime</assignToReference>
+            <field>ArrivalWindowEndTime</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.ArrivalWindowStartTime</assignToReference>
+            <field>ArrivalWindowStartTime</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.Description</assignToReference>
+            <field>Description</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.ParentRecordId</assignToReference>
+            <field>ParentRecordId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.ParentRecordType</assignToReference>
+            <field>ParentRecordType</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.SchedEndTime</assignToReference>
+            <field>SchedEndTime</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.SchedStartTime</assignToReference>
+            <field>SchedStartTime</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.Status</assignToReference>
+            <field>Status</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.Subject</assignToReference>
+            <field>Subject</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ServiceAppointment.WorkTypeId</assignToReference>
+            <field>WorkTypeId</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Appt_Status</name>
+        <label>Update Appt Status</label>
+        <locationX>72</locationX>
+        <locationY>288</locationY>
+        <connector>
+            <targetReference>CancellationConfirmation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ServiceAppointmentId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Canceled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>ServiceAppointment</object>
+    </recordUpdates>
+    <screens>
+        <name>Cancel_Appointment_Options</name>
+        <label>Cancel Appointment Options</label>
+        <locationX>248</locationX>
+        <locationY>30</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Cancellation_Selection</targetReference>
+        </connector>
+        <fields>
+            <name>AreYouSure</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:16px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;&lt;I&gt;Are you sure you would like to cancel this appointment?&lt;/I&gt;&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>placeholdertext</name>
+            <fieldText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum erat massa, in posuere neque varius in. Quisque felis urna, egestas quis ullamcorper sit amet, dictum in sem. Duis lectus turpis, imperdiet eget molestie nec, sollicitudin ut sapien. Duis condimentum neque eget feugiat fringilla. Etiam arcu odio, suscipit id rhoncus at, molestie nec tortor. Cras scelerisque lorem vitae risus dapibus tincidunt. Suspendisse sit amet elit eget libero hendrerit consectetur quis in nunc.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Cancel_Appointment</name>
+            <choiceReferences>Cancel_my_appointment</choiceReferences>
+            <choiceReferences>Nevermind_take_me_back</choiceReferences>
+            <dataType>Boolean</dataType>
+            <defaultSelectedChoiceReference>Nevermind_take_me_back</defaultSelectedChoiceReference>
+            <fieldText>Do you want to cancel?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <helpText>Cancel Appointment?</helpText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CancellationAborted</name>
+        <label>CancellationAborted</label>
+        <locationX>408</locationX>
+        <locationY>288</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>PlaceholderCancellationConfirmation</name>
+            <fieldText>Appointment Not Canceled
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum erat massa, in posuere neque varius in. Quisque felis urna, egestas quis ullamcorper sit amet, dictum in sem. Duis lectus turpis, imperdiet eget molestie nec, sollicitudin ut sapien. Duis condimentum neque eget feugiat fringilla. Etiam arcu odio, suscipit id rhoncus at, molestie nec tortor. Cras scelerisque lorem vitae risus dapibus tincidunt. Suspendisse sit amet elit eget libero hendrerit consectetur quis in nunc.
+
+Donec ac velit vitae massa suscipit vulputate eget quis libero. Mauris non justo ac nunc egestas eleifend. Aenean commodo, nulla non dapibus fringilla, risus augue finibus ex, sed volutpat eros mi et augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean a ante rhoncus, vehicula nisl vitae, mollis nisl. Nullam tincidunt at enim ac egestas. Quisque egestas nunc et neque euismod egestas.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <helpText>Cancellation aborted</helpText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CancellationConfirmation</name>
+        <label>CancellationConfirmation</label>
+        <locationX>71</locationX>
+        <locationY>420</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CancellationConfirmationEnd</name>
+            <fieldText>Appointment Canceled
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum erat massa, in posuere neque varius in. Quisque felis urna, egestas quis ullamcorper sit amet, dictum in sem. Duis lectus turpis, imperdiet eget molestie nec, sollicitudin ut sapien. Duis condimentum neque eget feugiat fringilla. Etiam arcu odio, suscipit id rhoncus at, molestie nec tortor. Cras scelerisque lorem vitae risus dapibus tincidunt. Suspendisse sit amet elit eget libero hendrerit consectetur quis in nunc.
+
+Donec ac velit vitae massa suscipit vulputate eget quis libero. Mauris non justo ac nunc egestas eleifend. Aenean commodo, nulla non dapibus fringilla, risus augue finibus ex, sed volutpat eros mi et augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean a ante rhoncus, vehicula nisl vitae, mollis nisl. Nullam tincidunt at enim ac egestas. Quisque egestas nunc et neque euismod egestas.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <helpText>Your appointment has been canceled</helpText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Lookup_Existing_Appointment</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>ServiceAppointment</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceAppointment</objectType>
+    </variables>
+    <variables>
+        <name>ServiceAppointmentId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

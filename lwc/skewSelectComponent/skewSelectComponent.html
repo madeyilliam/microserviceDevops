@@ -1,0 +1,70 @@
+<template>
+    <lightning-card>
+        <template if:false={objectApiNames.length}>
+            <br/>
+            <lightning-spinner size="medium" variant="brand" alternative-text="Loading"></lightning-spinner>
+            <br/>
+        </template>
+        <template if:true={objectApiNames.length}>
+            <div class="slds-p-horizontal_small">
+                <div class="filter-modal">
+                    <div slot="body" class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <template if:false={isAllObjects}>
+                                <lightning-input
+                                    field-level-help="Select mutliple objects. Click outside to close dropdown."
+                                    class="slds-m-bottom_large" type="search" label="Master Objects"
+                                    name="master-object" value={objSearch} onchange={filterObjects}
+                                    onfocus={filterObjects} onblur={clearFocus}>
+                                </lightning-input>
+                            </template>
+                            <template if:true={showDropdown}>
+                                <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid">
+                                    <ul class="slds-listbox slds-listbox_vertical recordListBox" role="presentation">
+                                        <template for:each={objectApiNames} for:item="obj">
+                                            <template if:true={obj.isVisible}>
+                                                <li key={obj.value} data-id={obj.value} onmousedown={selectItem}
+                                                    class="slds-listbox__item eachItem">
+                                                    <template if:true={obj.selected}>
+                                                        <lightning-icon icon-name="utility:check" size="x-small"
+                                                            alternative-text="icon"></lightning-icon>
+                                                    </template>
+                                                    <span
+                                                        class="slds-media slds-listbox__option_entity verticalAlign slds-truncate">{obj.label}</span>
+                                                </li>
+                                            </template>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </template>
+                        </div>
+                        <template for:each={selected} for:item="obj" for:index="index">
+                            <lightning-pill class="slds-m-around_xxx-small slds-m-bottom_medium" key={obj} value={obj}
+                                label={obj} onremove={removeObj} data-index={obj}>
+                            </lightning-pill>
+                        </template>
+                    </div>
+                    <div class="slds-form-element">
+                        <lightning-input class="slds-m-top_-large" type="checkbox" onchange={checkboxHandler}
+                            label="All Objects" name="input1">
+                        </lightning-input>
+                    </div>
+                </div>
+            </div>
+        </template>
+            <div slot="footer">
+                <template if:true={enableSubmit}>
+                    <lightning-button variant="brand" label="Generate" title="Generate" onclick={handleClick}
+                        class="slds-m-left_x-small slds-m-bottom_large"></lightning-button>
+                    <template if:false={isAllObjects}>
+                        <lightning-button variant="brand" label="Run" title="Run" onclick={handleRun}
+                            class="slds-m-left_x-small slds-m-bottom_large"></lightning-button>
+                    </template>
+                </template>
+                <br />
+                <template if:true={progress}>
+                    <lightning-progress-bar class="slds-m-top_large" value={progress}></lightning-progress-bar>
+                </template>
+            </div>
+    </lightning-card>
+</template>

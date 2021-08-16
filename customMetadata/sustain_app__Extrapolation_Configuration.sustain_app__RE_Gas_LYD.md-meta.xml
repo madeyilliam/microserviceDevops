@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Extrapolation</label>
+    <protected>false</protected>
+    <values>
+        <field>sustain_app__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sustain_app__Energy_Type__c</field>
+        <value xsi:type="xsd:string">Natural Gas</value>
+    </values>
+    <values>
+        <field>sustain_app__Extrapolation_Approach__c</field>
+        <value xsi:type="xsd:string">Last year&apos;s data</value>
+    </values>
+    <values>
+        <field>sustain_app__Record_Type__c</field>
+        <value xsi:type="xsd:string">Real_Estate_Facility</value>
+    </values>
+    <values>
+        <field>sustain_app__Source_Field__c</field>
+        <value xsi:type="xsd:string">sustain_app__Extrapolated_Monthly_Natural_Gas_kWh__c</value>
+    </values>
+    <values>
+        <field>sustain_app__Source_SObject__c</field>
+        <value xsi:type="xsd:string">sustain_app__ConsumptionReport__c</value>
+    </values>
+    <values>
+        <field>sustain_app__Target_Field__c</field>
+        <value xsi:type="xsd:string">sustain_app__Natural_Gas_Consumption_kWh__c</value>
+    </values>
+    <values>
+        <field>sustain_app__Target_SObject__c</field>
+        <value xsi:type="xsd:string">sustain_app__EnergyConsumption__c</value>
+    </values>
+    <values>
+        <field>sustain_app__Value_Field_on_Target__c</field>
+        <value xsi:type="xsd:string">sustain_app__Value_Natural_Gas_Consumption__c</value>
+    </values>
+</CustomMetadata>

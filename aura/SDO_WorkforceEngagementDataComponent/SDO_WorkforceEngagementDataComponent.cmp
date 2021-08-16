@@ -1,0 +1,54 @@
+<aura:component controller="SDO_WorkforceEngagementDataController">
+    <aura:handler name="init" value="{!this}" action="{!c.init}"></aura:handler>
+    <aura:attribute name="is_loading" type="Boolean" default="true"></aura:attribute>
+    <aura:attribute name="record_counts" type="Map"></aura:attribute>
+    <aura:attribute name="case_count" type="Integer"></aura:attribute>
+    <aura:attribute name="chat_count" type="Integer"></aura:attribute>
+    <aura:attribute name="call_count" type="Integer"></aura:attribute>
+    <aura:attribute name="csv_data" type="String"></aura:attribute>
+    
+    <div class="slds-grid slds-wrap slds-gutters slds-grid--pull-padded">
+        
+        <div>
+            <aura:if isTrue="{! v.is_loading }">
+                <lightning:spinner size="large" variant="brand" />
+            </aura:if>
+        </div>
+        
+        <div class="slds-text-heading_large">
+        	Workforce Engagement Data Loader
+        </div>
+        <div class="card slds-size_1-of-1">
+            <p>Click on the corresponding object type to load <b>one year worth of data</b> to populate Workforce Engagement data for Machine learning.</p>
+            <p>One year's worth of data will allow you to predict 6 months of case, chat, or call volume.</p>
+            <p>Data load can take up to a minute, so please do not close the page while it's running.</p>
+        </div>
+        
+        <div class="card slds-size_1-of-1">
+            <lightning:card title="{! 'Case History ('+v.case_count+' records)'}">
+                <aura:set attribute="actions">
+                    <lightning:button disabled="{!v.case_count > 100}" variant="brand" onclick="{!c.loadCases}">Load</lightning:button>
+                    <lightning:button disabled="{!v.case_count == 0}" variant="destructive" onclick="{!c.deleteCases}">Delete</lightning:button>
+                </aura:set>
+            </lightning:card>
+        </div>
+        
+        <div class="card slds-size_1-of-1">
+            <lightning:card title="{!'Chat History ('+v.chat_count+' records)'}">
+                <aura:set attribute="actions">
+                    <lightning:button disabled="{!v.chat_count >= 100}" variant="brand" onclick="{!c.loadChats}">Load</lightning:button>
+                    <lightning:button disabled="{!v.chat_count == 0}" variant="destructive" onclick="{!c.deleteChats}">Delete</lightning:button>
+                </aura:set>
+            </lightning:card>
+        </div>
+        
+        <div class="card slds-size_1-of-1">
+            <lightning:card title="{!'Call History ('+v.call_count+' records)'}">
+                <aura:set attribute="actions">
+                    <lightning:button disabled="{!v.call_count >= 100}" variant="brand" onclick="{!c.loadCalls}">Load</lightning:button>
+                    <lightning:button disabled="{!v.call_count == 0}" variant="destructive" onclick="{!c.deleteCalls}">Delete</lightning:button>
+                </aura:set>
+            </lightning:card>
+        </div>
+    </div>
+</aura:component>

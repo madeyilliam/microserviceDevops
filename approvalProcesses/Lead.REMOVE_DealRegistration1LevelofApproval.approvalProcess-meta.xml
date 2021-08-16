@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Company</field>
+        <field>Owner</field>
+        <field>Address</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>SDO_Sales_Lead_Update_Status</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>SDO_Sales_Update_Lead_Status</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>vchannel@nitishbansal-20210729.demo</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Channel Manager Approval</label>
+        <name>ChannelManagerApproval</name>
+        <rejectionActions>
+            <action>
+                <name>SDO_Sales_Lead_Status_Update</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>SDO_Sales_Set_to_Rejected</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>REMOVE_</description>
+    <emailTemplate>SDO_Sales_DealRegistrations/SDO_Sales_Deal_Reg_Channel_Manager_Notification</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Lead.RecordType</field>
+            <operation>equals</operation>
+            <value>Deal Registration</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Deal Registration - 1 Level of Approval</label>
+    <postTemplate>SDO_Sales_Deal_Reg_Approval</postTemplate>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

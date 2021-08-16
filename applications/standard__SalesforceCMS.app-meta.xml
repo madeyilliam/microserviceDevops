@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Manage web content for all the communities in your org today. Commerce, Heroku, Platform, and other clouds coming in Spring!</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Salesforce CMS</label>
+    <navType>Console</navType>
+    <tabs>SDO_Community_CMS_Instructions</tabs>
+    <tabs>standard-CmsAuthorHome</tabs>
+    <tabs>standard-CmsWorkspaces</tabs>
+    <tabs>standard-CmsChannel</tabs>
+    <tabs>standard-CmsExperiences</tabs>
+    <tabs>SDO_Community_Training_Course__c</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>SDO_Community_CMS_Content_Types</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Salesforce_CMS_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>SDO_Community_CMS_Content_Types</tab>
+        </mappings>
+        <mappings>
+            <tab>SDO_Community_CMS_Instructions</tab>
+        </mappings>
+        <mappings>
+            <tab>SDO_Community_Training_Course__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-CmsAuthorHome</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-CmsChannel</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-CmsExperiences</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-CmsWorkspaces</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-File</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

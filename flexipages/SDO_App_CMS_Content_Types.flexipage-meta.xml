@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;CMS Content Types make publishing information to the web intuitive and easy, by allowing you to predefine &lt;i&gt;metadata&lt;/i&gt; fields for commonly-published items. Imagine creating blog posts with a Title, Body, Publish Date, and Image field. Or creating a banner ad with an image, title, and call to action link. Custom CMS content types allow you to do this.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;This custom page allows you to visually define your own custom content types, without using the Metadata API.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Want to give your customers this tool? &lt;a href=&quot;https://appexchange.salesforce.com/listingDetail?listingId=a0N5e000002Vy46UAB&quot; target=&quot;_blank&quot;&gt;Check it out on the AppExchange!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 20px; color: rgb(250, 0, 0);&quot;&gt;SALESFORCE SEs: &lt;/b&gt;&lt;span style=&quot;color: rgb(250, 0, 0);&quot;&gt;Additional configuration is required for this page. If you are seeing &lt;/span&gt;&lt;b style=&quot;color: rgb(250, 0, 0);&quot;&gt;System.CalloutException&lt;/b&gt;&lt;span style=&quot;color: rgb(250, 0, 0);&quot;&gt; in the screen below, please copy the URL listed and add that URL to &lt;/span&gt;&lt;a href=&quot;https://help.salesforce.com/articleView?id=configuring_remoteproxy.htm&amp;amp;type=5&quot; target=&quot;_blank&quot; style=&quot;color: rgb(250, 0, 0);&quot;&gt;Remote Site Settings in setup.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(250, 0, 0);&quot;&gt;Full setup instructions for the CMS Content Type Creator are &lt;/span&gt;&lt;a href=&quot;https://appexchange.salesforce.com/servlet/servlet.FileDownload?file=00P5e000001MP1FUA4&quot; target=&quot;_blank&quot; style=&quot;color: rgb(250, 0, 0);&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;color: rgb(250, 0, 0);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>height</name>
+                    <value>422</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>CMS Content Types</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageName</name>
+                    <value>sflabs_cms_ct__CMS_ContentTypes_WrapperVFP</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showLabel</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:visualforcePage</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;IMPORTANT NOTES &amp;amp; TASKS&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;CMS Content Types cannot be edited/updated yet. This is a limitation of the CMS platform as of the Spring &apos;20 release.&lt;/li&gt;&lt;li&gt;Before deleting a CMS content type, you must delete all content items of that type.&lt;/li&gt;&lt;li&gt;The default NEWS content type cannot be modified or deleted.&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Key CMS Resources&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=1EXVH59jPYw&quot; target=&quot;_blank&quot;&gt;Watch the Video&lt;/a&gt;: Salesforce CMS&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;CMS Documentation&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.salesforce.com/articleView?id=community_managed_content_overview.htm&amp;amp;type=5&quot; target=&quot;_blank&quot;&gt;Help &amp;amp; Training: Salesforce CMS&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.224.0.communities_dev.meta/communities_dev/cms_dev_customcontenttypes.htm&quot; target=&quot;_blank&quot;&gt;Creating Custom Content Types using the API&lt;/a&gt;: The default way of creating CMS content types using the API.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;More Resources&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Trailhead: &lt;a href=&quot;https://trailhead.salesforce.com/en/content/learn/modules/salesforce-cms-basics&quot; target=&quot;_blank&quot;&gt;Salesforce CMS Basics&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://cms.salesforce.com/&quot; target=&quot;_blank&quot;&gt;Salesforce CMS Website&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.learncommunitycloud.com/&quot; target=&quot;_blank&quot;&gt;CMS &amp;amp; DXP Campfires&lt;/a&gt;: hands-on customer webinars for Community &amp;amp; CMS&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>App - CMS Content Types</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumnsStacked</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

@@ -1,0 +1,8 @@
+.THIS {
+    max-width: 768px;
+    margin: 0 auto !important;
+}
+
+.THIS .card {
+    margin: .5em 0;
+}

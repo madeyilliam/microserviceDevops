@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Yes</stringValue>
+        </value>
+    </choices>
+    <interviewLabel>NBA-Offer Community Moderator Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NBA-Offer Community Moderator Status</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Offer_Moderation_Capabilities</name>
+        <label>Offer Moderation Capabilities</label>
+        <locationX>49</locationX>
+        <locationY>115</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>AgentScript1</name>
+            <extensionName>c:SDO_Flow_scriptDisplayFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>callscript</name>
+                <value>
+                    <stringValue>We have noticed that you are very active on our self service community. We have special positions available where you will be able to act as a moderator on specific communities or topics that you have a personal interest in.</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>AgentScript2</name>
+            <extensionName>c:SDO_Flow_scriptDisplayFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>callscript</name>
+                <value>
+                    <stringValue>Is this something you are interested in?</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Response</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Response</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Offer_Moderation_Capabilities</startElementReference>
+    <status>Active</status>
+</Flow>

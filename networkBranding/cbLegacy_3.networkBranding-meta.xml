@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NetworkBranding xmlns="http://soap.sforce.com/2006/04/metadata">
+    <loginFooterText>Cirrus</loginFooterText>
+    <loginLogo>SDO_Communities_Shared_Document_Folder/SDO_CommunityCirrusLogo_copy_png.png</loginLogo>
+    <loginLogoName>CirrusLogo copy.png</loginLogoName>
+    <network>Ω - Legacy 3</network>
+    <primaryColor>#39A9E5</primaryColor>
+    <primaryComplementColor>#222222</primaryComplementColor>
+    <quaternaryColor>#2F2F2F</quaternaryColor>
+    <quaternaryComplementColor>#FFFFFF</quaternaryComplementColor>
+    <secondaryColor>#51606E</secondaryColor>
+    <tertiaryColor>#DDE4E9</tertiaryColor>
+    <tertiaryComplementColor>#222222</tertiaryComplementColor>
+    <zeronaryColor>#2F2F2F</zeronaryColor>
+    <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+</NetworkBranding>
