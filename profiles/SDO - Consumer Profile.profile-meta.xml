@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Support_Type</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Audience</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Product</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Region</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Product_Version</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <custom>true</custom>
+    <description>Profile for guest users of Consumer Community.</description>
+    <userLicense>Guest User License</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowUniversalSearch</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>PasswordNeverExpires</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseWebLink</name>
+    </userPermissions>
+</Profile>

@@ -1,0 +1,2 @@
+<apex:page id="loginPage" controller="SDO_Community_LoginController" action="{!forwardToAuthPage}" title="{!$Label.site.site_login}"> 
+</apex:page>

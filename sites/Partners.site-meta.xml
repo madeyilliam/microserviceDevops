@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <browserXssProtection>false</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <changePasswordPage>SDO_Community_ChangePassword</changePasswordPage>
+    <clickjackProtectionLevel>AllowAllFraming</clickjackProtectionLevel>
+    <contentSniffingProtection>false</contentSniffingProtection>
+    <description>This site is the former Partner Portal and is no longer used.</description>
+    <enableAuraRequests>true</enableAuraRequests>
+    <indexPage>et4ae5__ABTestDetail</indexPage>
+    <masterLabel>Ω - Partners</masterLabel>
+    <portal>* Partner Portal</portal>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>false</referrerPolicyOriginWhenCrossOrigin>
+    <siteAdmin>nitish.bansal@salesforce.com.ldvsdo</siteAdmin>
+    <siteGuestRecordDefaultOwner>nitish.bansal@salesforce.com.ldvsdo</siteGuestRecordDefaultOwner>
+    <siteRedirectMappings>
+        <action>Permanent</action>
+        <isActive>true</isActive>
+        <source>/partners/home/home.jsp</source>
+        <target>/partners/apex/Community_Partner_Home?sfdc.tabName=01ra0000001VlZT</target>
+    </siteRedirectMappings>
+    <siteType>Visualforce</siteType>
+    <subdomain>sdo-demo-main-166ce2cf6b6-17-17af104d2a7</subdomain>
+    <urlPathPrefix>Partners</urlPathPrefix>
+</CustomSite>

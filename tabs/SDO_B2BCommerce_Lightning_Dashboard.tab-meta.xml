@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: B2B Commerce TCRM Dashboard Who: Michael Cala &amp; B2B Comm. Team</description>
+    <flexiPage>SDO_B2BLE_App_Dashboard</flexiPage>
+    <label>B2B Commerce Lightning Dashboard</label>
+    <motif>Custom59: Can</motif>
+</CustomTab>

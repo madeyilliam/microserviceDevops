@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>SDO_TS_Approved</fullName>
+        <description>What: Timesheet Approved</description>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>TS Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_TS_Recalled</fullName>
+        <description>What: Timesheet Recalled</description>
+        <field>Status</field>
+        <literalValue>Recalled</literalValue>
+        <name>TS Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_TS_submitted</fullName>
+        <description>What: Time Sheet set to Submitted</description>
+        <field>Status</field>
+        <literalValue>Submitted</literalValue>
+        <name>TS submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

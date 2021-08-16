@@ -1,0 +1,2 @@
+<apex:page StandardController="Account" extensions="SDO_CPQ_Q2CGenerateQuickQuote" action="{!genQuote}">
+</apex:page>

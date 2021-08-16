@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SDO_Community_DealRegistrationAcknowledgement</fullName>
+        <description>Community - Deal Registration Acknowledgement</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Sales_DealRegistrations/SDO_Sales_Deal_Reg_Partner_Acknowledgement</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Community_DealRegistrationRejected</fullName>
+        <description>Community - Deal Registration Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Sales_DealRegistrations/SDO_Sales_DealRegistrationRejected</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Community_PartnerAcknowledgement</fullName>
+        <description>Community - Partner Acknowledgement</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Sales_DealRegistrations/SDO_Sales_LeadChangedtoDealRegistration</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>SDO_Sales_ApprovalStatustoApproved</fullName>
+        <description>What: update Approval Status to Approved for Lead</description>
+        <field>SDO_Sales_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sales - Approval Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_ApprovalStatustoRejected</fullName>
+        <description>What: Set Approval Status to Rejected for Lead</description>
+        <field>SDO_Sales_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sales - Approval Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_ChangeLeadSource</fullName>
+        <description>What: Lead source change</description>
+        <field>LeadSource</field>
+        <name>Sales - Change Lead Source</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_LeadApprovalStatustoSubmitted</fullName>
+        <description>What: Update Lead Approval Status to Submitted.</description>
+        <field>SDO_Sales_Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Sales -  Approval Status to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_LeadStatustoDraft</fullName>
+        <description>What: Lead status to Draft</description>
+        <field>Status</field>
+        <literalValue>Draft</literalValue>
+        <name>Sales - Lead Status to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_Lead_Status_Update</fullName>
+        <description>What: Lead status to Rejected</description>
+        <field>Status</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sales - Lead Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_Lead_Update_Status</fullName>
+        <description>What: Update Lead Status to approved</description>
+        <field>SDO_Sales_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sales - Lead Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_RecordTypetoDealRegistration</fullName>
+        <description>What: Lead Record type to Deal Registration.</description>
+        <field>RecordTypeId</field>
+        <lookupValue>SDO_Lead_DealRegistration</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Sales - Record Type to Deal Registration</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_Set_to_Rejected</fullName>
+        <description>What: lead approval status set to rejected</description>
+        <field>SDO_Sales_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sales - Set to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_UpdateDealApprovedDate</fullName>
+        <description>What: Update Deal Approval Date to Now for Leads</description>
+        <field>SDO_Sales_Deal_Approved_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Sales - Update Deal Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_UpdateDealExpirationDate</fullName>
+        <description>What: Update Deal Expiration Date for Lead Object.</description>
+        <field>SDO_Sales_Registration_Expiration__c</field>
+        <formula>NOW() + 60</formula>
+        <name>Sales - Update Deal Expiration Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_UpdateLeadStatustoApproved</fullName>
+        <description>What: Update Lead Status to Approved</description>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>Sales - Update Lead Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_UpdateLeadStatustoRejected</fullName>
+        <description>What: update Lead Status to Rejected</description>
+        <field>Status</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sales - Update Lead Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_UpdateLeadStatustoSubmitted</fullName>
+        <description>What: Update Lead Status to Submitted.</description>
+        <field>Status</field>
+        <literalValue>Submitted</literalValue>
+        <name>Sales - Update Lead Status to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Sales_Update_Lead_Status</fullName>
+        <description>What: Update Lead Status to Qualified</description>
+        <field>Status</field>
+        <literalValue>Qualified</literalValue>
+        <name>Sales - Update Lead Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>SDO - Sales - Lead Contact After Assignment</fullName>
+        <actions>
+            <name>SDO_Sales_NewLeadAssignedtoyouFollowupwithin24Hours</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>What: Assigns a task to a new Lead owner to remind them to contact the lead.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>SDO_Sales_NewLeadAssignedtoyouFollowupwithin24Hours</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>A new lead has been assigned to you in Salesforce. Please follow up within 24 hours or your manager will be notified.
+
+Thanks,
+Sales Operations</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Sales - New Lead Assigned to you. Follow up within 24 Hours</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>campaigns</category>
+    <deployed>true</deployed>
+    <description>Pardot List Emails</description>
+    <label>Pardot List Emails</label>
+    <sections>
+        <masterLabel>List Emails</masterLabel>
+    </sections>
+</ReportType>

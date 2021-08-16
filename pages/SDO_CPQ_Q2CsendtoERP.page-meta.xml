@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>What: Dummy page that simulates the synchronization with the ERP, which updates the ERP ID field on the Order. Who: CPQ Team</description>
+    <label>SDO_CPQ_Q2CsendtoERP</label>
+</ApexPage>

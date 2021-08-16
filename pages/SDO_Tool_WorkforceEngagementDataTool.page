@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning /> 
+    
+    <div id="dom"/>
+ 
+    <script>
+        $Lightning.use("c:SDO_WorkforceEngagementDataApp", function() {
+          $Lightning.createComponent("c:SDO_WorkforceEngagementDataComponent",
+              {},
+              "dom",
+              function(component) {
+              }
+          );
+        });
+    </script>
+    
+</apex:page>

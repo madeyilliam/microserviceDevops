@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Depot</masterLabel>
+        <translation><!-- Depot --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Plant</masterLabel>
+        <translation>Planta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Site</masterLabel>
+        <translation>Local</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Store</masterLabel>
+        <translation><!-- Store --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Van</masterLabel>
+        <translation>Van</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Virtual</masterLabel>
+        <translation><!-- Virtual --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Warehouse</masterLabel>
+        <translation>Armazém</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

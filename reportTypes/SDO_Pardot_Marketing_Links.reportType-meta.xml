@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>campaigns</category>
+    <deployed>true</deployed>
+    <description>Pardot Marketing Links</description>
+    <label>Pardot Marketing Links</label>
+    <sections>
+        <masterLabel>Marketing Links</masterLabel>
+    </sections>
+</ReportType>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Marketing Qualified Leads</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>SDO_Marketing_Managers</publicGroup>
+            <publicGroup>SDO_Sales_Reps</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SDO_Sales_AutomatedRenewalNotice</fullName>
+        <description>Sales - Automated Renewal Notice</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Sales_Templates/SDO_Sales_Renewal_Notice</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>SDO_Service_StatusofAsset30DayWarning</fullName>
+        <description>What: Update the Asset Warranty Status to 30 Day Warning.</description>
+        <field>Entitlement_Status__c</field>
+        <literalValue>30 Day Warning</literalValue>
+        <name>Service - Asset Status &quot;30 Day Warning&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <tasks>
+        <fullName>SDO_Sales_RenewalNotice</fullName>
+        <assignedTo>nitish.bansal@salesforce.com.ldvsdo</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Please Follow up with customer to make sure we get the renewal business.</description>
+        <dueDateOffset>-15</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Asset.UsageEndDate</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Sales - Renewal Notice</subject>
+    </tasks>
+</Workflow>

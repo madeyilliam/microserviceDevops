@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/x-x509-ca-cert</contentType>
+    <description>What: Einstein Platform Cert. Not sure if this is needed anymore. Who: Unsure.</description>
+</StaticResource>

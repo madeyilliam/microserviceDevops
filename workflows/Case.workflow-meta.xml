@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SDO_Service_CSAT_Survey</fullName>
+        <description>Service - CSAT Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Templates/SDO_Service_Case_Closed_Email_Template_with_Salesforce_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Service_Milestone_1st_Response_SUCCESSFUL</fullName>
+        <description>Service - Milestone - First Response - SUCCESSFUL</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Entitlement_Milestone/SDO_Service_Milestone_1st_Response_Success</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Service_Milestone_1st_Response_VIOLATION</fullName>
+        <description>Service - Milestone - First Response - VIOLATION</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Entitlement_Milestone/SDO_Service_Milestone_1st_Response_Violation</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Service_Milestone_1st_Response_Warning</fullName>
+        <description>Service - Milestone - First Response - WARNING</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Entitlement_Milestone/SDO_Service_Milestone_1st_Response_Warning</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Service_Send_customer_satisfaction_survey</fullName>
+        <description>Service - Send customer satisfaction survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Templates/SDO_Service_Default_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>SDO_Service_Trigger_Laptop_Email</fullName>
+        <description>Service - Troubleshoot Audio Flow Confirmation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SDO_Service_Templates/SDO_Service_Troubleshoot_Audio_Flow_Confirmation</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>SDO_Service_Assign_to_Tier_1_Queue</fullName>
+        <description>What: Assign to Tier 1</description>
+        <field>OwnerId</field>
+        <lookupValue>SDO_Service_Tier1Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Service - Assign to Tier 1 Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Case_Owner_to_Tier_2_Queue</fullName>
+        <description>What: Case owner set to TIer 2 queu</description>
+        <field>OwnerId</field>
+        <lookupValue>SDO_Service_Tier2Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Service - Case Owner to Tier 2 Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_First_Contact_Close_box</fullName>
+        <description>What: Check the &quot;First Contact Close&quot; box on the case.</description>
+        <field>First_Contact_Close__c</field>
+        <literalValue>1</literalValue>
+        <name>Service - First Contact Close box</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Mark_Case_as_Non_Compliant</fullName>
+        <description>What: Mark SLA Compliant to non-compliant</description>
+        <field>SDO_Service_SLA_Compliant__c</field>
+        <literalValue>0</literalValue>
+        <name>Service - Mark Case as Non-Compliant</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Resume_SLA_Clock_on_Case</fullName>
+        <description>What: Resume SLA Clock on Case. Not currently used</description>
+        <field>IsStopped</field>
+        <literalValue>0</literalValue>
+        <name>Service - Resume SLA Clock on Case</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Set_Case_Escalated_to_True</fullName>
+        <description>What: Set case to escalated</description>
+        <field>IsEscalated</field>
+        <literalValue>1</literalValue>
+        <name>Service - Set Case Escalated to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Set_Case_Status_to_Escalated</fullName>
+        <description>What: Set case to Escalated</description>
+        <field>Status</field>
+        <literalValue>Escalated</literalValue>
+        <name>Service - Set Case Status to Escalated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Set_Case_Status_to_Working</fullName>
+        <description>What: Set case to working</description>
+        <field>Status</field>
+        <literalValue>Working</literalValue>
+        <name>Service - Set Case Status to Working</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Set_Escalated_Flag</fullName>
+        <description>What: Set Escalated Field to True</description>
+        <field>IsEscalated</field>
+        <literalValue>1</literalValue>
+        <name>Service - Set Escalated Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Set_Origin_to_Community</fullName>
+        <description>What: Set Case origin to community</description>
+        <field>Origin</field>
+        <literalValue>Community</literalValue>
+        <name>Service - Set Origin to Community</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Status_Waiting_on_Customer</fullName>
+        <description>What: Status to Waiting on Customer</description>
+        <field>Status</field>
+        <literalValue>Waiting on Customer</literalValue>
+        <name>Service - Status to Waiting on Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Stop_SLA_Clock_on_Case</fullName>
+        <description>What: Stop SLA Clock on Case</description>
+        <field>IsStopped</field>
+        <literalValue>1</literalValue>
+        <name>Service - Stop SLA Clock on Case</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Tier_2</fullName>
+        <description>What: Assign to Tier 2 Queue</description>
+        <field>OwnerId</field>
+        <lookupValue>SDO_Service_Tier2Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Service - Assign to Tier 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDO_Service_Update_Case_Owner_to_Social</fullName>
+        <description>What: update Case Owner to Social Queue. Who: Service Team.</description>
+        <field>OwnerId</field>
+        <lookupValue>SDO_Service_Social_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Service - Update Case Owner to Social</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>SDO - Service - Assign Social Case to Social Queue</fullName>
+        <actions>
+            <name>SDO_Service_Update_Case_Owner_to_Social</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Facebook,Twitter,Google,Instagram,LinkedIn</value>
+        </criteriaItems>
+        <description>What: For Social Cases, Assign to &apos;Social Queue&apos; and apply Social Case Record Type Who: Service Team</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SDO - Service - Categorise Community Case</fullName>
+        <actions>
+            <name>SDO_Service_Assign_to_Tier_1_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Community</value>
+        </criteriaItems>
+        <description>What: Changes Case Origin of Case created in Community to &quot;Community&quot;. Who: Service Team</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SDO - Service - Escalate Case</fullName>
+        <actions>
+            <name>SDO_Service_Set_Escalated_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SDO_Service_Tier_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </criteriaItems>
+        <description>What: Assign case to &quot;Tier 2 Queue&quot; when Escalated field is checked. Who: Service Team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SDO - Service - Mark Case closed on First Contact</fullName>
+        <actions>
+            <name>SDO_Service_First_Contact_Close_box</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>What: Mark the &quot;First Contact Close&quot; field when the case moves directly from &quot;New&quot; to &quot;Closed&quot; status. Who: Service Team</description>
+        <formula>AND( 
+NOT(ISNEW()), 
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;New&quot;), 
+ISPICKVAL(Status, &quot;Closed&quot;) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SDO - Service - Troubleshoot Audio Flow Confirmation Email</fullName>
+        <actions>
+            <name>SDO_Service_Trigger_Laptop_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.SDO_Service_Send_Email_Trigger__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>What: Send a confirmation to the contact after the &quot;Troubleshoot Audio&quot; flow is complete. Who: Service Team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>SDO_Sales_Sendnewstatement</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Sales - Send new statement</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_EngineeringReview</fullName>
+        <assignedTo>nitish.bansal@salesforce.com.ldvsdo</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Service - Engineering Review</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_FeatureRequestSubmitted</fullName>
+        <assignedTo>nitish.bansal@salesforce.com.ldvsdo</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Service - Feature Request Submitted</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_Milestone_1st_Response_Successful</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>The 1st Response milestone for this case was SUCCESSFUL</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Service - Milestone - 1st Response - SUCCESSFUL</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_Milestone_1st_Response_VIOLATION</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Milestone - 1st Response - VIOLATED</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Service - Milestone - 1st Response - VIOLATION</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_Yourcustomerhadabillingquestion</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Service - Your customer had a billing question</subject>
+    </tasks>
+    <tasks>
+        <fullName>SDO_Service_YourcustomerhasopenedaCase</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Service - Your customer has opened a Case</subject>
+    </tasks>
+</Workflow>

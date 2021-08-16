@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>SDO_Community_Training_Course__c</entityName>
+    <fieldName>Course_Status__c</fieldName>
+    <masterLabel>General - Training Course Status</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Total_Completed__c</fieldNames>
+        <info>&lt;p&gt;Your course has been archived and can no longer be registered for.&lt;/p&gt;</info>
+        <picklistValueName>Archived</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Total_Enrolled__c</fieldNames>
+        <fieldNames>Total_Completed__c</fieldNames>
+        <fieldNames>Starts__c</fieldNames>
+        <info>&lt;p&gt;Your course is open for registration!&lt;/p&gt;</info>
+        <picklistValueName>Available for Registration</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Course_Format__c</fieldNames>
+        <fieldNames>Starts__c</fieldNames>
+        <info>&lt;p&gt;Time to fill out the details for this course! Be sure to complete:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Course Format&lt;/li&gt;&lt;li&gt;Date &amp;amp; Time of Start&lt;/li&gt;&lt;li&gt;Short Description&lt;/li&gt;&lt;li&gt;Full Curriculum&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Draft</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

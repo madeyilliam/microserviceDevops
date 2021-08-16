@@ -1,0 +1,2 @@
+<apex:page StandardController="blng__Invoice__c" extensions="SDO_CPQ_Q2CPost" action="{!Post}">
+</apex:page>

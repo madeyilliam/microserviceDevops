@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PostTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <default>true</default>
+    <description>What: Quote Approval</description>
+    <fields>Name</fields>
+    <fields>Opportunity</fields>
+    <fields>Discount</fields>
+    <fields>TotalPrice</fields>
+    <label>SDO - Quote Approval</label>
+</PostTemplate>

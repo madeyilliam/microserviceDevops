@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: Used in Communities to have NBA Recommendations dynamically appear when the user creates a case containing specific words. Who: Joe Morse. When: 2020.</description>
+    <if>
+        <childNode>Load_Extend_Warranty_Rec</childNode>
+        <label>warranty</label>
+        <name>warranty</name>
+        <childNodeExpression>
+            <childName>Load_Extend_Warranty_Rec</childName>
+            <expression>CONTAINS(LOWER($Request.subject), &apos;warranty&apos;)</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Community - Contact Us</label>
+    <recommendationLoad>
+        <label>Load Extend Warranty Rec</label>
+        <name>Load_Extend_Warranty_Rec</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Extend Warranty</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>warranty</childNode>
+        <label>Output</label>
+        <name>Output_19bfd516039343d990743b0e81cbcbfc</name>
+    </union>
+</RecommendationStrategy>

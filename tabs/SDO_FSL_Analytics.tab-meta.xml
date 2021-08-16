@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: FSL Analytics Tab Who: FSL Team</description>
+    <flexiPage>SDO_App_FSL_Analytics</flexiPage>
+    <label>Field Service Analytics</label>
+    <motif>Custom95: Stopwatch</motif>
+</CustomTab>

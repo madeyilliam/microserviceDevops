@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>FulfillmentOrder</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>OMS - Fulfillment Order</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The order is allocated to a fulfillment location, assigned to a fulfillment order, and moved to an allocated status. Allocations are set to collect payment at the time of shipping.&lt;/p&gt;</info>
+        <picklistValueName>Allocated</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The order items from the fulfillment order are assigned for picking &amp;amp; packing.&lt;/p&gt;</info>
+        <picklistValueName>Assigned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The order has been cancelled.&lt;/p&gt;</info>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The order has been submitted via commerce site, but is not yet shipped or fulfilled.&lt;/p&gt;</info>
+        <picklistValueName>Draft</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The order items have been packed and dispatched to the carrier to be shipped to the customer.&lt;/p&gt;</info>
+        <picklistValueName>Fulfilled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The Order is currently being prepared for shipping. This step usually includes:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;picking and packaging products in an envelope, bag or box&lt;/li&gt;&lt;li&gt;labelling the order for shipment&lt;/li&gt;&lt;li&gt;shipping the package with a carrier (Excluding Store Pickup Orders)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pickpack</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Fulfillment_Orders</recordTypeName>
+</PathAssistant>

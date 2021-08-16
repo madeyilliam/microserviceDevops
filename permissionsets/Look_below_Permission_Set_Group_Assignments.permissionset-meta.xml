@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>It improves performance of the app to have them grouped.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>* Please Add New Permsets to the Admin_User_Permset Permission Set Group.</label>
+</PermissionSet>

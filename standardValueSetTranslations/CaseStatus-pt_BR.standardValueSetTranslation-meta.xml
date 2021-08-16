@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>⏱  Waiting on Customer</masterLabel>
+        <translation>Esperando Interação com Cliente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>⚙️  Working</masterLabel>
+        <translation>Em Execução</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>❎  Closed</masterLabel>
+        <translation>Fechado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>⭐️  New</masterLabel>
+        <translation>Novo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>🔺Escalated</masterLabel>
+        <translation>Escalado</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

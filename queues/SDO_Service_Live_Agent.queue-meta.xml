@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Chat</name>
+    <queueMembers>
+        <users>
+            <user>jservice@nitishbansal-20210729.demo</user>
+            <user>lservice@nitishbansal-20210729.demo</user>
+            <user>nitish.bansal@salesforce.com.ldvsdo</user>
+            <user>sservice@nitishbansal-20210729.demo</user>
+            <user>tservice@nitishbansal-20210729.demo</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>SDO_Service_Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

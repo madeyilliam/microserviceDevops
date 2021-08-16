@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiLoad>
+        <description>NBA powered by Field Service Parts Recommendations</description>
+        <label>SFS ERB</label>
+        <name>SDO_SFS_ERB</name>
+        <acceptanceLabel>Add Part to Work Order</acceptanceLabel>
+        <actionReference>SDO_FSL_ERB_Part_Recommendation_OOTB</actionReference>
+        <descriptionField>Description</descriptionField>
+        <recommendationDefinitionDevName>mlrd_0Pp5e000000DkdVSAO_v0</recommendationDefinitionDevName>
+        <rejectionLabel>Take no action</rejectionLabel>
+        <titleField>Name</titleField>
+    </aiLoad>
+    <contextRecordType>WorkOrder</contextRecordType>
+    <description>What: SFS / Field Service NBA powered by out of the box Einstein Recommendation Builder. Who: Laura Bode &amp; SFS Team.</description>
+    <label>SFS - ERB OOTB</label>
+    <union>
+        <childNode>SDO_SFS_ERB</childNode>
+        <label>Output</label>
+        <name>Output_8df81281f6f84f61b15f1e4bc0b24625</name>
+    </union>
+</RecommendationStrategy>

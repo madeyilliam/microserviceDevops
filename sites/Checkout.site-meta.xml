@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>SDO_Community_Unauthorized</authorizationRequiredPage>
+    <bandwidthExceededPage>SDO_Community_BandwidthExceeded</bandwidthExceededPage>
+    <browserXssProtection>true</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
+    <contentSniffingProtection>true</contentSniffingProtection>
+    <enableAuraRequests>true</enableAuraRequests>
+    <fileNotFoundPage>SDO_Community_FileNotFound</fileNotFoundPage>
+    <genericErrorPage>SDO_Community_Exception</genericErrorPage>
+    <inMaintenancePage>SDO_Community_InMaintenance</inMaintenancePage>
+    <inactiveIndexPage>SDO_Community_InMaintenance</inactiveIndexPage>
+    <indexPage>blng__checkOut</indexPage>
+    <masterLabel>Checkout</masterLabel>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <siteAdmin>sdo_a2.gikzgljha71i@nitishbansal-20210729.demo</siteAdmin>
+    <siteTemplate>SDO_Community_SiteTemplate</siteTemplate>
+    <siteType>Visualforce</siteType>
+    <subdomain>sdo-demo-main-166ce2cf6b6-17-17af104d2a7</subdomain>
+    <urlPathPrefix>checkout</urlPathPrefix>
+</CustomSite>

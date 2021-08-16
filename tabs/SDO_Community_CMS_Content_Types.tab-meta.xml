@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: CMS Content Type Tab with custom component on it for SE instructions Who: Joe Morse</description>
+    <flexiPage>SDO_App_CMS_Content_Types</flexiPage>
+    <label>CMS Content Types</label>
+    <motif>Custom56: Bottle</motif>
+</CustomTab>

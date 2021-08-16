@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>What: CMS Instructions to setup/customize Who: Joe Morse</description>
+    <flexiPage>SDO_App_CMS_Instructions</flexiPage>
+    <label>Salesforce CMS Instructions</label>
+    <motif>Custom64: Compass</motif>
+</CustomTab>

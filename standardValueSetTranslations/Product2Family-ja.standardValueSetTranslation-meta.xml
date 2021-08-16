@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Batteries</masterLabel>
+        <translation><!-- Batteries --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Battery Tools</masterLabel>
+        <translation><!-- Battery Tools --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kits</masterLabel>
+        <translation><!-- Kits --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Product</masterLabel>
+        <translation>製品</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Service</masterLabel>
+        <translation>サービス</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Services</masterLabel>
+        <translation><!-- Services --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Software Licenses</masterLabel>
+        <translation><!-- Software Licenses --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Solar Panels</masterLabel>
+        <translation><!-- Solar Panels --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Turbines</masterLabel>
+        <translation><!-- Turbines --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>
